@@ -1,0 +1,402 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: "Poppins", sans-serif;
+  background: darkgrey;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 0px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  /* margin-bottom: 40px; */
+  /* box-shadow: 1px 1px 3px rgb(0 0 0 / 10%); */
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ------- others --------- */
+.first-row {
+  background-color: white;
+}
+
+.second-row {
+  background-color: #f8f9fa;
+}
+
+.menu {
+  background: #222;
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  /* min-width: 250px; */
+  width: 306px;
+  /* margin-left: -15rem; */
+  margin-left: 0rem;
+  background: #7386d5;
+  color: #fff;
+  transition: margin 0.3s;
+}
+
+#sidebar.toggled {
+  max-width: 45px;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active,
+.show > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.btn-info.focus,
+.btn-info:focus {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-info:hover {
+  /* color: #fff; */
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  border: none !important;
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+span.logo {
+  padding: 1rem;
+}
+
+span.heading {
+  padding: 2rem 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-group.has-search {
+  padding: 25px 34px 0;
+  border-radius: 19px;
+  display: flex;
+  /* background-color: #F5F5F5; */
+}
+
+.has-search .form-control {
+  padding: 0 3.375rem;
+  border-radius: 50px;
+  background-color: #f5f5f5;
+  color: #555555;
+  font-size: 14px;
+  /* border-left: 1px solid bisque; */
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  border-right: 1px solid #f5f5f5;
+  padding: 0rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+span.close-button {
+  /* position: relative; */
+  margin: 5px -25px;
+}
+
+.top-right.float-right {
+  padding: 24px;
+}
+
+span.user {
+  padding: 1px;
+  color: #555555;
+  font-size: 14px;
+}
+
+span.user-name {
+  margin-left: 10px;
+}
+
+span.scan {
+  margin-left: 10px;
+}
+
+.sidebar-menu {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.sidebar-menu li a {
+  padding: 18px 18px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-menu li span {
+  margin-right: 47px;
+  color: white;
+}
+
+.sidebar-menu li a:hover {
+  background-color: gba(0, 0, 0, 0.2);
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+li.have-children ul {
+  list-style-type: disc;
+  color: white;
+}
+
+li.have-children span img {
+  top: 17px;
+  left: 24px;
+  position: absolute;
+}
+
+li.have-children ul li a {
+  font-size: 10px;
+  color: #ada9bf;
+  margin: 0;
+  padding: 0;
+}
+
+li.have-children ul li a:hover {
+  color: white;
+}
+
+li.have-children,
+li {
+  position: relative;
+}
+
+.have-children span::after {
+  position: absolute;
+  right: 30px;
+  top: 21px;
+  content: url(images/dropdown-arrow.png);
+  color: white;
+  transition: all 0.5s;
+}
+
+li.active.have-children span::after {
+  transform: rotate(90deg);
+}
+
+.sidebar-menu .have-children > ul {
+  display: none;
+}
+
+h3.fs-4.mb-3.order-heading {
+  font-size: 18px;
+}
+
+span.listview {
+  padding-left: 22px;
+  font-size: 12px;
+  /* display: inline-flex; */
+}
+
+.row.main-top-row {
+  margin-left: -20px;
+}
+
+span.list-title {
+  color: #307feb;
+  margin-left: 4px;
+}
+
+span.load-title {
+  margin-left: 4px;
+}
+
+.row.main-middle-row {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  opacity: 1;
+  padding: 10px;
+  margin: 1rem 0;
+}
+
+span.filter {
+  font-size: 14px;
+}
+
+span.week,
+span.archived,
+span.test-order {
+  font-size: 14px;
+  text-align: center;
+  width: 83px;
+  background: #e7ebf7 0% 0% no-repeat padding-box;
+  border-radius: 13px;
+  opacity: 1;
+  margin-left: 16px;
+}
+
+span.archived {
+  width: 103px;
+}
+
+span.test-order {
+  width: 120px;
+}
+
+.order-status-table {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.order-status-table .table-caption {
+  /* padding-left: 510px; */
+  display: block;
+  float: right;
+}
+
+span.add-title {
+  color: #307feb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+span.action {
+  margin-left: 50px;
+}
+
+span.action-title {
+  color: #555555;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+span.down-arrow {
+  margin-left: 10px;
+}
+
+span.reference {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #555555;
+  font-weight: 400;
+}
+
+span.solid-arrow {
+  margin-left: 55px;
+}
+
+img.small-down {
+  margin: 10px 0 0 -8px;
+}
+
+span.ship {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+span.vj {
+  background-color: #1cb995;
+  border-radius: 71px;
+  margin: -2rem 17px;
+  padding: 16px 12px;
+  /* height: 30px; */
+  /* width: 38px; */
+  /* opacity: 19; */
+}
+
+span.vj-title {
+  /* padding: 15px; */
+  margin-top: 34px;
+  font-size: 23px;
+  color: white;
+}/*# sourceMappingURL=tms-dashboard.css.map */

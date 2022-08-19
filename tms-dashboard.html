@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="tms-dashboard.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="row m-2 first-row">
+      <div class="col-md-8">
+        <div class="top-left d-flex">
+          <span class="logo">
+            <img src="images/logo.png" src="company-logo"
+          /></span>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <img src="images/burger-menu.png" alt="menu-toggle" />
+              </button>
+            </div>
+          </nav>
+          <span class="heading">QA DILE Solutions TMS</span>
+          <div class="form-group has-search">
+            <span class="form-control-feedback"
+              ><img src="images/search.png" alt="search-icon"
+            /></span>
+            <input type="text" class="form-control" placeholder="Search..." />
+            <span class="close-button"
+              ><img src="images/close.png" alt="close-icon"
+            /></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="top-right float-right">
+          <span class="user"
+            ><img src="images/Mick.png" alt="mick" /><span class="user-name"
+              >Mick Fernands</span
+            >
+          </span>
+          <span class="scan"><img src="images/scan.png" alt="scanner" /></span>
+        </div>
+      </div>
+    </div>
+    <div class="row rounded m-3 second-row">
+      <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <!-- <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+          </div> -->
+          <div class="menu">
+            <ul class="sidebar-menu">
+              <li>
+                <a href="#">
+                  <span class="home"
+                    ><img class="icon" src="images/home.png" alt="home-icon" />
+                    Home</span
+                  >
+                </a>
+              </li>
+              <li class="have-children">
+                <a href="#">
+                  <span class="order"
+                    ><img
+                      class="icon"
+                      src="images/orders.png"
+                      src="order-icon"
+                    />
+                    Orders</span
+                  >
+                </a>
+                <ul>
+                  <li><a href="#">Orders list</a></li>
+                  <li><a href="#">New Order</a></li>
+                  <li><a href="#">LTL Quote</a></li>
+                  <li><a href="#">TL Quote</a></li>
+                  <li><a href="#">Shipments</a></li>
+                  <li><a href="#">Templates</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          <h3 class="fs-4 mb-3 order-heading">Order List</h3>
+          <div class="row main-top-row">
+            <span class="listview"
+              ><img src="images/listview.png" alt="" /><span class="list-title"
+                >List View</span
+              >
+            </span>
+            <span class="listview"
+              ><img src="images/load-board.png" alt="" /><span
+                class="load-title"
+                >Load Board</span
+              >
+            </span>
+            <span class="listview"
+              ><img src="images/tracking.png" alt="" /><span class="load-title"
+                >Tracking</span
+              ></span
+            >
+          </div>
+          <div class="row main-middle-row">
+            <!-- <div class="col-md-12"> -->
+            <div class="col-md-9">
+              <div class="left-sec d-flex">
+                <span class="filter">Search/Filters</span>
+                <span class="week">This Week</span>
+                <span class="archived">Archived: Yes</span>
+                <span class="test-order">Test Orders: No</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="right-sec float-right">
+                <span class="right-icon"
+                  ><img src="images/Path-23081.png" alt=""
+                /></span>
+              </div>
+            </div>
+
+            <!-- </div> -->
+          </div>
+          <div class="row my-4 bg-white">
+            <div class="col">
+              <tr>
+                <th class="table-caption">
+                  <span class="add"
+                    ><img src="images/add.png" />
+                    <span class="add-title">Create New Order</span></span
+                  >
+                  <span class="action"
+                    ><img src="images/action.png" />
+                    <span class="action-title">Order Actions</span></span
+                  >
+                  <span class="down-arrow"
+                    ><img src="images/down-arrow.png"
+                  /></span>
+                </th>
+              </tr>
+              <div class="table-responsive">
+                <table class="table bg-white align-middle order-status-table">
+                  <!-- <tr>
+                    <th class="table-caption">
+                      <span class="add"
+                        ><img src="images/add.png" />
+                        <span class="add-title">Create New Order</span></span
+                      >
+                      <span class="action"
+                        ><img src="images/action.png" />
+                        <span class="action-title">Order Actions</span></span
+                      >
+                      <span class="down-arrow"
+                        ><img src="images/down-arrow.png"
+                      /></span>
+                    </th>
+                  </tr> -->
+                  <tr style="background-color: #eaf1fc">
+                    <th class="table-header left-header">
+                      <input
+                        type="checkbox"
+                        id="reference"
+                        name="reference"
+                        value="refnumber"
+                      />
+                      <span class="reference"> Ref Numbers</span>
+                      <span class="solid-arrow"
+                        ><img src="images/small-up.png" class="small-up" /><img
+                          src="images/small-down.png"
+                          class="small-down"
+                      /></span>
+                    </th>
+                    <th class="table-header middle-header">
+                      <span class="ship"> Ship Date</span>
+                      <span class="solid-arrow"
+                        ><img src="images/small-up.png" class="small-up" /><img
+                          src="images/small-down.png"
+                          class="small-down"
+                      /></span>
+                    </th>
+                    <th class="table-header">
+                      <span class="ship"> Shipment Status</span>
+                      <span class="solid-arrow"
+                        ><img src="images/small-up.png" class="small-up" /><img
+                          src="images/small-down.png"
+                          class="small-down"
+                      /></span>
+                    </th>
+                    <th class="table-header">
+                      <span class="ship"> Origin</span>
+                    </th>
+                    <th class="table-header">
+                      <span class="ship"> Destination</span>
+                    </th>
+                    <th class="table-header">
+                      <span class="ship"> Rep</span>
+                    </th>
+                  </tr>
+                  <tr style="background-color: #eaf1fc; opacity: 0.4">
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="reference"
+                        name="reference"
+                        value="refnumber"
+                      />
+                      <span class="vj"><span class="vj-title">VG</span> </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- <h2>Collapsible Sidebar Using Bootstrap 4</h2> -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <div class="line"></div>
+
+          <h2>Lorem Ipsum Dolor</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <div class="line"></div>
+
+          <h2>Lorem Ipsum Dolor</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <div class="line"></div>
+
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // $("#sidebarCollapse").click(function () {
+      //   if ($(window).width() > 500) {
+      //     //your chosen mobile res
+      //     $(".text").toggle(300);
+      //   } else {
+      //     $(".menu").animate(
+      //       {
+      //         width: "toggle",
+      //       },
+      //       500
+      //     );
+      //   }
+      // });
+      var el = document.getElementById("sidebar");
+      var toggleButton = document.getElementById("sidebarCollapse");
+
+      toggleButton.onclick = function () {
+        el.classList.toggle("toggled");
+      };
+
+      $(document).ready(function () {
+        $(".sidebar-menu > li.have-children a").on("click", function (i) {
+          i.preventDefault();
+          if (!$(this).parent().hasClass("active")) {
+            $(".sidebar-menu li ul").slideUp();
+            $(this).next().slideToggle();
+            $(".sidebar-menu li").removeClass("active");
+            $(this).parent().addClass("active");
+          } else {
+            $(this).next().slideToggle();
+            $(".sidebar-menu li").removeClass("active");
+          }
+        });
+
+        // $("#menu-toggle") .click(function(){
+        // 	$("#wrapper").hide();
+        // })
+      });
+    </script>
+  </body>
+</html>
